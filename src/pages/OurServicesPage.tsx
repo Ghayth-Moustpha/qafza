@@ -4,8 +4,8 @@ const OurServicesPage: React.FC = () => {
   return (
     <main className="w-full bg-white">
       {/* Hero Section */}
-      <section className="w-full bg-purpleRoyal text-white py-16 px-8 text-center">
-        <motion.div
+      <section className="relative bg-gradient-to-r from-purpleRoyal to-sunsetOrange text-white py-20 w-full">
+      <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -22,6 +22,11 @@ const OurServicesPage: React.FC = () => {
       </section>
 
       {/* Services Section */}
+      <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: -5 }}
+          transition={{ duration: 1 }}
+        >
       <section className="w-full py-16 px-8 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Service 1 */}
         <motion.div
@@ -97,6 +102,7 @@ const OurServicesPage: React.FC = () => {
           </motion.button>
         </motion.div>
       </section>
+      </motion.div>
     </main>
   );
 };

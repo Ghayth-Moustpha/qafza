@@ -34,7 +34,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className={`bg-white py-12 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`} dir="ltr">
+    <section className={`bg-white py-12 transition-opacity duration-1000 overflow-hidden ${isVisible ? 'opacity-100' : 'opacity-0 '}`} dir="ltr">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="md:w-1/2 text-center  md:px-0 ">
           <div className="border shadow-lg z-20 p-10">

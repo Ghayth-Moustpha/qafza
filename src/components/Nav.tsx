@@ -34,7 +34,7 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50 left-0 w-full ">
+    <nav className="bg-white shadow-lg sticky top-0 z-50 left-0 w-full m-0 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-13 ">
           <div className="flex items-center ">
@@ -71,7 +71,7 @@ const Nav = () => {
             احجز استشارتك المجانية الآن
           </button>
         </div>
-          <div className="-mr-2 flex md:hidden">
+          <div className="-mr-4 flex md:hidden">
             <button
               onClick={toggleMenu}
               type="button"
@@ -92,11 +92,11 @@ const Nav = () => {
 
       <div
         className={`${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } shadow-lg transform md:hidden fixed top-0 right-0 w-64 h-full backdrop-blur	 transition-transform duration-300 ease-in-out`}
+          isMenuOpen ? 'translate-x-4' : 'translate-x-[700px]'
+        } shadow-lg transform md:hidden fixed top-0 right-0 w-80 h-full backdrop-blur	 transition-transform duration-300 ease-in-out`}
         id="mobile-menu"
       >
-        <div className="px-4 py-5">
+        <div className= {`px-4 py-5 ${isMenuOpen? '' :''}`}>
           <div className="flex justify-between items-center mb-5">
           <Link to="/" className="flex-shrink-0 m-1">
             <img src="./logo.png" alt="Qafza-tech-Logo" className="h-20" />

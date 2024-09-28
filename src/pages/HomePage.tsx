@@ -5,11 +5,14 @@ import CardsSection from '../sections/CardsSection';
 import ShuffleHero from '../sections/ShuffleHero';
 import PromotionalSection from '../sections/PromotionalSection';
 import Inverst from '../sections/Inverst';
+import HeroSection2 from '../sections/HeroSection2';
 
 const HomePage: React.FC = () => {
   return (
     <div className='w-full'>
       <HeroSection/>
+      <HeroSection2/>
+
       <div className='relative'>
       <CardsSection/>
       </div>

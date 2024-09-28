@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 const ShuffleHero = () => {
   return (
@@ -54,7 +54,7 @@ const generateSquares = () => {
       key={sq.id}
       layout
       transition={{ duration: 1.5, type: "spring" }}
-      className="w-full h-full"
+      className=""
       style={{
         backgroundImage: `url(${sq.src})`,
         backgroundSize: "contain",
@@ -80,11 +80,12 @@ const ShuffleGrid = () => {
 
     timeoutRef.current = setTimeout(shuffleSquares, 3000);
   };
+  const renderedSquares = useMemo(() => squares.map((sq) => sq), [squares]);
 
   return (
-    <div className="grid grid-cols-4 grid-rows-4 h-[500px] gap-1">
-      {squares.map((sq) => sq)}
-    </div>
+    <div className="grid grid-cols-4 grid-rows-4 h-[500px] min-h-500px gap-1">
+      {renderedSquares}
+      </div>
   );
 };
 
