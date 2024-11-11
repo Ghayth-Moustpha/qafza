@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 
-const MainLayout: React.FC = () => {
+const AdminLayout: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navigation */}
@@ -21,4 +21,4 @@ const MainLayout: React.FC = () => {
   );
 };
 
-export default MainLayout;
+export default AdminLayout;
