@@ -2,98 +2,14 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full shadow-lg border   bg-  p-4 mt-6">
-      <div className="mx-auto max-w-7xl bg-white rounded-xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-8 py-10">
-          <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
-            <a href="https://qafza.com/" className="flex justify-center lg:justify-start">
-              <img src="./logo.png" alt="logo" className="h-40 " />
-            </a>
-          </div>
+    <footer className="w-full      p-4 mt-6">
+      <div className="mx-auto max-w-7xl  bg-orchidPurple   rounded-xl px-4 sm:px-6 lg:px-8">
+      
 
-          <div className="lg:mx-auto text-right">
-            <h4 className="text-lg text-gray-900 font-medium mb-7">قفزة</h4>
-            <ul className="text-sm transition-all duration-500">
-              <li className="mb-6">
-                <a href="javascript:;" className="text-gray-600 hover:text-gray-900">
-                  الرئيسية
-                </a>
-              </li>
-              <li className="mb-6">
-                <a href="javascript:;" className="text-gray-600 hover:text-gray-900">
-                  عن قفزة
-                </a>
-              </li>
-              <li className="mb-6">
-                <a href="javascript:;" className="text-gray-600 hover:text-gray-900">
-                  الأسعار
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;" className="text-gray-600 hover:text-gray-900">
-                  الميزات
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="lg:mx-auto text-right">
-            <h4 className="text-lg text-gray-900 font-medium mb-7">الموارد</h4>
-            <ul className="text-sm transition-all duration-500">
-              <li className="mb-6">
-                <a href="javascript:;" className="text-gray-600 hover:text-gray-900">
-                  الأسئلة الشائعة
-                </a>
-              </li>
-              <li className="mb-6">
-                <a href="javascript:;" className="text-gray-600 hover:text-gray-900">
-                  البدء السريع
-                </a>
-              </li>
-              <li className="mb-6">
-                <a href="javascript:;" className="text-gray-600 hover:text-gray-900">
-                  التوثيق
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;" className="text-gray-600 hover:text-gray-900">
-                  دليل المستخدم
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="lg:mx-auto text-right">
-            <h4 className="text-lg text-gray-900 font-medium mb-7">المدونات</h4>
-            <ul className="text-sm transition-all duration-500">
-              <li className="mb-6">
-                <a href="javascript:;" className="text-gray-600 hover:text-gray-900">
-                  الأخبار
-                </a>
-              </li>
-              <li className="mb-6">
-                <a href="javascript:;" className="text-gray-600 hover:text-gray-900">
-                  نصائح وحيل
-                </a>
-              </li>
-              <li className="mb-6">
-                <a href="javascript:;" className="text-gray-600 hover:text-gray-900">
-                  التحديثات الجديدة
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;" className="text-gray-600 hover:text-gray-900">
-                  الأحداث
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="py-7 border-t border-gray-200">
+        <div className="py-7  text-white ">
           <div className="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
-            <span className="text-sm text-gray-800 text-center w-full">
-              ©<a href="mailto:ghayth.moustpha@gmail.com" > جميع الحقوق محفوظة، تم التطوير من قبل م.غيث مصطفى
+            <span className="text-lg  text-center w-full">
+              ©<a href="mailto:ghayth.moustpha@gmail.com" > جميع الحقوق محفوظة، تم التطوير من قبل فريق قفزة التقني 
           
               </a>  </span>
             <div className="flex mt-4 space-x-4 sm:justify-center lg:mt-0">

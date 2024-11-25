@@ -8,6 +8,7 @@ import OurProgramsPage from '../pages/OurProgramsPage';
 import ContactUsPage from '../pages/ContactUsPage';
 import LibraryPage from '../pages/LibraryPage';
 import AdPage from '../pages/AdPage';
+import BookingPage from '../pages/BookingPage';
 
 const router = createBrowserRouter([
     {
@@ -43,7 +44,10 @@ const router = createBrowserRouter([
           path:'/contact' , 
           element:<ContactUsPage/>
         }
-        
+        ,  {
+          path:'/booking' , 
+          element:<BookingPage/>
+        }
 
       ]
     },

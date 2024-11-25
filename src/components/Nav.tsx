@@ -110,12 +110,12 @@ const Nav = () => {
           </div>
 
           <div className="hidden lg:block">
-            <button
+            <Link to="./booking"
               type="button"
               className="text-white bg-purpleRoyal hover:bg-purpleRoyal focus:ring-4 focus:outline-none font-2xl rounded-lg px-5 py-2.5 text-center inline-flex items-center transition duration-300 ease-in-out transform hover:scale-105"
             >
               احجز استشارتك المجانية الآن
-            </button>
+            </Link>
           </div>
 
           <div className="-mr-4 flex md:hidden">

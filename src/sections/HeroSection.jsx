@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AnimatedText from "../components/AnimatedText";
+import Modal from "react-modal";
+import { Link } from "react-router-dom";
 
 const importAll = (r) => {
   return r.keys().map(r);
@@ -10,15 +12,15 @@ const importAll = (r) => {
 
 const HeroSection = () => {
   const settings = {
-    dots: false, // Show dots for easier navigation
+    dots: false,
     infinite: true,
-    speed: 4000, // Shorter slide speed for smoother transitions
-    autoplay: true, // Enable autoplay for dynamic experience
-    autoplaySpeed: 2000, // Time between slides
+    speed: 4000,
+    autoplay: true,
+    autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    cssEase: "cubic-bezier(0.65, 0.05, 0.36, 1)", // Smooth easing effect
-    pauseOnHover: false, // Pause on hover for better control
+    cssEase: "cubic-bezier(0.65, 0.05, 0.36, 1)",
+    pauseOnHover: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -39,6 +41,7 @@ const HeroSection = () => {
 
   const [images, setImages] = useState([]);
   const [isVisible, setIsVisible] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
 
   useEffect(() => {
     const loadedImages = importAll(
@@ -50,6 +53,14 @@ const HeroSection = () => {
       setIsVisible(true);
     }, 100);
   }, []);
+
+  const openModal = () => {
+    setIsModalOpen(true); // Open the modal
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false); // Close the modal
+  };
 
   return (
     <section className={`bg-white py-12 transition-opacity duration-1000 overflow-hidden ${isVisible ? 'opacity-100' : 'opacity-0'}`} dir="ltr">
@@ -68,13 +79,15 @@ const HeroSection = () => {
                 موجودين لنخلي قفزتك إلى عالم التكنولوجيا قصة نجاح
               </span>
               <AnimatedText/>
-
             </p>
             <div className="flex justify-center md:justify-start">
-              <button className="bg-purpleRoyal hover:bg-orchidPurple text-white py-2 px-4 rounded-md mr-2">
+              <Link  to="booking" className="bg-purpleRoyal hover:bg-orchidPurple text-white py-2 px-4 rounded-md mr-2">
                 احجز استشارتك المجانية الآن
-              </button>
-              <button className="border border-gray-300 text-gray-700 py-2 px-4 hover:bg-orchidPurple hover:text-white rounded-md flex items-center">
+              </Link>
+              <button
+                onClick={openModal} // Open the modal when clicked
+                className="border border-gray-300 text-gray-700 py-2 px-4 hover:bg-orchidPurple hover:text-white rounded-md flex items-center"
+              >
                 <span className="ml-2">الفيديو التعريفي</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -109,6 +122,26 @@ const HeroSection = () => {
           </Slider>
         </div>
       </div>
+
+      {/* Modal */}
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="YouTube Video"
+        className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-11/12 md:w-3/4 h-3/4"
+        overlayClassName="fixed inset-0 bg-black bg-opacity-50"
+      >
+        <button onClick={closeModal} className="absolute top-4 right-4 text-white text-xl">X</button>
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/6sNtkH3prtg"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </Modal>
     </section>
   );
 };
